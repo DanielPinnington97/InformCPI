@@ -1,0 +1,46 @@
+﻿@model InformCPISolution.Domain.Dto.ContactDto;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Contact</title>
+</head>
+<body>
+    @using (Html.BeginForm("EditContact", "Home", FormMethod.Post))
+    {
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" align="center">Contact Details</th>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>PhoneNumber: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.PhoneNumber)
+                </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Email)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
